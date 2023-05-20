@@ -9,3 +9,10 @@ if Rails.env.development? || Rails.env.test?
 end
 
 Lobsters::Application.load_tasks
+
+Rake::Task["assets:precompile"].clear
+namespace :assets do
+  task 'precompile' do
+    puts "Not precompiling assets..."
+  end
+end
