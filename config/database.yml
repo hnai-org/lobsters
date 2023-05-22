@@ -1,9 +1,9 @@
-production: 
+development:
   adapter: mysql2
   encoding: utf8mb4
   reconnect: false
-  database: <%= ENV["MYSQLDATABASE"] %>
-  host: <%= ENV["MYSQLHOST"] %>
-  port: <%= ENV["MYSQLPORT"] %>
-  username: <%= ENV["MYSQLUSER"] %>
-  password: <%= ENV["MYSQLPASSWORD"] %>
+  database: lobster_dev
+  socket: /tmp/mysql.sock
+  username: lobster
+  password: lobster
+  
