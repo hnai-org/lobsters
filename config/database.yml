@@ -1,18 +1,43 @@
-development:
-  adapter: mysql2
-  encoding: utf8mb4
-  reconnect: false
-  database: lobster_dev
-  socket: /tmp/mysql.sock
-  username: lobster
-  password: lobster
+# development:
+#   adapter: mysql2
+#   encoding: utf8mb4
+#   reconnect: false
+#   database: lobster_dev
+#   socket: /tmp/mysql.sock
+#   username: lobster
+#   password: lobster
 
-production: 
+# production: 
+#   adapter: mysql2
+#   encoding: utf8mb4
+#   reconnect: false
+#   database: <%= ENV["MYSQLDATABASE"] %>
+#   host: <%= ENV["MYSQLHOST"] %>
+#   port: <%= ENV["MYSQLPORT"] %>
+#   username: <%= ENV["MYSQLUSER"] %>
+#   password: <%= ENV["MYSQLPASSWORD"] %>
+
+default: &default
   adapter: mysql2
   encoding: utf8mb4
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   reconnect: false
   database: <%= ENV["MYSQLDATABASE"] %>
   host: <%= ENV["MYSQLHOST"] %>
   port: <%= ENV["MYSQLPORT"] %>
   username: <%= ENV["MYSQLUSER"] %>
   password: <%= ENV["MYSQLPASSWORD"] %>
+
+development:
+  <<: *default
+  url: <%= ENV["MYSQL_URL"] %>
+
+test:
+  <<: *default
+  url: <%= ENV["MYSQL_URL"] %>
+
+production:
+  <<: *default
+  url: <%= ENV["MYSQL_URL"] %>
