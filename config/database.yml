@@ -1,10 +1,18 @@
+development:
+  adapter: mysql2
+  encoding: utf8mb4
+  reconnect: false
+  database: lobster_dev
+  socket: /tmp/mysql.sock
+  username: lobster
+  password: lobster
+
 production: 
   adapter: mysql2
   encoding: utf8mb4
   reconnect: false
-  database: <%= ENV["MYSQLDATABASE"] %>
-  host: <%= ENV["MYSQLHOST"] %>
-  port: <%= ENV["MYSQLPORT"] %>
-  username: <%= ENV["MYSQLUSER"] %>
-  password: <%= ENV["MYSQLPASSWORD"] %>
-  
+  database: railway
+  host: containers-us-west-154.railway.app
+  port: 7712
+  username: root
+  password: hk9Oynz4nUF1Vuh3Hhio
