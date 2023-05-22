@@ -49,7 +49,7 @@ gem 'transaction_retry' # mitigate https://github.com/lobsters/lobsters-ansible/
 gem 'rack-attack' # rate-limiting
 gem 'faker'
 
-group :test, :development do
+group :test, :development, :production do
   gem 'capybara'
   gem 'database_cleaner'
   gem "listen"
