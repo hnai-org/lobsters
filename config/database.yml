@@ -11,8 +11,8 @@ production:
   adapter: mysql2
   encoding: utf8mb4
   reconnect: false
-  database: railway
-  host: containers-us-west-154.railway.app
-  port: 7712
-  username: root
-  password: hk9Oynz4nUF1Vuh3Hhio
+  database: <%= ENV["MYSQLDATABASE"] %>
+  host: <%= ENV["MYSQLHOST"] %>
+  port: <%= ENV["MYSQLPORT"] %>
+  username: <%= ENV["MYSQLUSER"] %>
+  password: <%= ENV["MYSQLPASSWORD"] %>
