@@ -24,15 +24,16 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   reconnect: false
-  database: <%= ENV["MYSQLDATABASE"] %>
-  host: <%= ENV["MYSQLHOST"] %>
-  port: <%= ENV["MYSQLPORT"] %>
-  username: <%= ENV["MYSQLUSER"] %>
-  password: <%= ENV["MYSQLPASSWORD"] %>
+
 
 development:
   <<: *default
   url: <%= ENV["MYSQL_URL"] %>
+  database: lobster_dev
+  host: localhost
+  socket: /tmp/mysql.sock
+  username: lobster
+  password: lobster
 
 test:
   <<: *default
@@ -41,3 +42,8 @@ test:
 production:
   <<: *default
   url: <%= ENV["MYSQL_URL"] %>
+  database: <%= ENV["MYSQLDATABASE"] %>
+  host: <%= ENV["MYSQLHOST"] %>
+  port: <%= ENV["MYSQLPORT"] %>
+  username: <%= ENV["MYSQLUSER"] %>
+  password: <%= ENV["MYSQLPASSWORD"] %>

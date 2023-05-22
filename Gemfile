@@ -47,7 +47,6 @@ gem "sitemap_generator" # for better search engine indexing
 gem "svg-graph", require: 'SVG/Graph/TimeSeries' # for charting, note workaround in lib/time_series.rb
 gem 'transaction_retry' # mitigate https://github.com/lobsters/lobsters-ansible/issues/39
 gem 'rack-attack' # rate-limiting
-gem 'faker'
 
 group :test, :development, :production do
   gem 'capybara'
