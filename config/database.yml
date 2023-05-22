@@ -1,5 +1,7 @@
 production: 
   <<: *default
-  database: railwayapp_production
-  username: railwayapp
-  password: <%= ENV["RAILWAYAPP_DATABASE_PASSWORD"] %>
+  database: <%= ENV["MYSQLDATABASE"] %>
+  host: <%= ENV["MYSQLHOST"] %>
+  port: <%= ENV["MYSQLPORT"] %>
+  username: <%= ENV["MYSQLUSER"] %>
+  password: <%= ENV["MYSQLPASSWORD"] %>
