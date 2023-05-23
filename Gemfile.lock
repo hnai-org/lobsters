@@ -338,7 +338,7 @@ DEPENDENCIES
   listen
   mail
   memory_profiler
-  mysql2
+  mysql2 (~> 0.5.5)
   nokogiri (>= 1.13.9)
   oauth
   pdf-reader
