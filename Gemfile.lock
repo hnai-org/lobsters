@@ -180,7 +180,7 @@ GEM
       ruby-rc4
       ttfunk
     public_suffix (5.0.1)
-    puma (6.2.1)
+    puma (6.2.2)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.4)
@@ -342,7 +342,7 @@ DEPENDENCIES
   nokogiri (>= 1.13.9)
   oauth
   pdf-reader
-  puma (>= 5.6.2)
+  puma (>= 6.2.2)
   rack-attack
   rack-mini-profiler
   rails (~> 7.0.4.3)
@@ -367,4 +367,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   2.3.16
+   2.4.13

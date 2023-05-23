@@ -21,7 +21,7 @@ gem "uglifier", ">= 1.3.0"
 # deployment
 gem "actionpack-page_caching"
 gem "exception_notification"
-gem "puma", ">= 5.6.2"
+gem "puma", ">= 6.2.2"
 
 # security
 gem "bcrypt", "~> 3.1.2"
