@@ -28,7 +28,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV["MYSQL_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
   database: lobster_dev
   host: localhost
   socket: /tmp/mysql.sock
@@ -37,13 +37,8 @@ development:
 
 test:
   <<: *default
-  url: <%= ENV["MYSQL_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
 
 production:
   <<: *default
-  url: <%= ENV["MYSQL_URL"] %>
-  database: <%= ENV["MYSQLDATABASE"] %>
-  host: <%= ENV["MYSQLHOST"] %>
-  port: <%= ENV["MYSQLPORT"] %>
-  username: <%= ENV["MYSQLUSER"] %>
-  password: <%= ENV["MYSQLPASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
