@@ -12,7 +12,7 @@ Lobsters::Application.load_tasks
 
 Rake::Task["assets:precompile"].clear
 namespace :assets do
-  task 'precompile' do
-    puts "Not precompiling assets..."
-  end
+#  task 'precompile' do
+#    puts "Not precompiling assets..."
+#  end
 end
