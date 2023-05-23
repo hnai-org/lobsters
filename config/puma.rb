@@ -32,10 +32,10 @@ workers ENV.fetch("WEB_CONCURRENCY") { 12 }
 # before forking the application. This takes advantage of Copy On Write
 # process behavior so workers use less memory.
 #
-if ENV.fetch("RAILS_ENV") == "production"
-  bind 'unix:///srv/lobste.rs/http/tmp/puma.sock'
-  preload_app!
-end
+#if ENV.fetch("RAILS_ENV") == "production"
+#  bind 'unix:///srv/lobste.rs/http/tmp/puma.sock'
+#  preload_app!
+#end
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
