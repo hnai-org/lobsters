@@ -25,7 +25,8 @@
   <% end %>
   <title><%= @title.present? ? "#{@title} | " : "" %><%=
     Rails.application.name %></title>
-  <%= stylesheet_link_tag "application", :media => "all", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
   <% if @user %>
     <%= javascript_include_tag "application" %>
   <% end %>
